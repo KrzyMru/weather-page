@@ -16,6 +16,7 @@
   --font-dm-sans: "DM Sans", sans-serif;
   --font-bricolage-grotesque: "Bricolage Grotesque", sans-serif;
 
+  --text-lg: 22px;
   --text-md: 18px;
 }
 
@@ -26,4 +27,16 @@
 body {
   margin: 0;
   height: 100dvh;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 1;
+  }
 }
