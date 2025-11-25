@@ -9,6 +9,7 @@
     align-items: center;
     gap: 4px;
 
+    border: solid 1px var(--neutral-300);
     background-color: var(--neutral-600);
     color: var(--neutral-0);
     font-family: var(--font-dm-sans);

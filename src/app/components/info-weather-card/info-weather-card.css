@@ -8,6 +8,7 @@
     flex-direction: column;
     gap: 24px;
 
+    border: solid 1px var(--neutral-300);
     background-color: var(--neutral-600);
     color: var(--neutral-200);
     font-family: var(--font-dm-sans);
