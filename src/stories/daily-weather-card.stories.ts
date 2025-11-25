@@ -46,13 +46,10 @@ export const Snowy: Story = {
   },
 };
 
+export const MissingData: Story = {};
+
 export const Loading: Story = {
   args: {
-    day: 'Mon',
-    imageSrc: IconSunny,
-    imageAlt: 'Sunny',
-    maxTemperature: 24,
-    minTemperature: 16,
     loading: true,
   },
 };
