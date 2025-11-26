@@ -1,7 +1,8 @@
 .skeleton__daily {
-    width: 154px;
-    height: 215px;
+    min-width: 142px;
+    height: 203px;
     border-radius: 16px;
+    box-sizing: border-box;
 
     border: solid 1px var(--neutral-600);
     background-color: var(--neutral-800);

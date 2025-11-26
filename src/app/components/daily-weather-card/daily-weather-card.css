@@ -1,8 +1,8 @@
 .card__daily {
-    min-width: 140px;
     border-radius: 16px;
     padding: 20px;
     box-sizing: border-box;
+    flex-shrink: 0;
 
     display: flex;
     flex-direction: column;
@@ -18,8 +18,8 @@
 }
 
 .daily__icon {
-    height: 112px;
-    width: 112px;
+    height: 100px;
+    width: 100px;
 }
 
 .daily__temperature {
