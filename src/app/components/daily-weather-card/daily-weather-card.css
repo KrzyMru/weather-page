@@ -9,12 +9,12 @@
     align-items: center;
     gap: 4px;
 
-    border: solid 1px var(--neutral-300);
-    background-color: var(--neutral-600);
+    border: solid 1px var(--neutral-600);
+    background-color: var(--neutral-800);
     color: var(--neutral-0);
     font-family: var(--font-dm-sans);
     font-size: var(--text-lg);
-    font-weight: 600;
+    font-weight: 500;
 }
 .card__daily--loading {
     animation: loading 1.5s ease-in-out infinite;
