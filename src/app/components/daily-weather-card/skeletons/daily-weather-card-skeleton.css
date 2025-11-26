@@ -1,0 +1,9 @@
+.skeleton__daily {
+    width: 154px;
+    height: 215px;
+    border-radius: 16px;
+
+    border: solid 1px var(--neutral-600);
+    background-color: var(--neutral-800);
+    animation: loading 1.5s ease-in-out infinite;
+}

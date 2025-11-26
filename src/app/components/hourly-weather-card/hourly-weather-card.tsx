@@ -1,20 +1,19 @@
 import "./hourly-weather-card.css";
 import type { HourlyWeatherCardProps } from "./types";
-import IconSunny from "../../assets/icon-sunny.webp";
 
 const HourlyWeatherCard = (props: HourlyWeatherCardProps) => {
-    const { imageSrc, imageAlt, time, temperature, loading } = { ...props }
+    const { imageSrc, imageAlt, time, temperature } = { ...props }
 
     return (
-        <div className={`card__hourly ${loading ? 'card__hourly--loading' : ''}`}>
+        <div className="card__hourly">
             <img
-                src={imageSrc ?? IconSunny}
-                alt={imageAlt ?? 'Sunny'}
+                src={imageSrc}
+                alt={imageAlt}
                 className="hourly__icon"
             />
             <div className="hourly__data">
-                {time ?? '-'}
-                <span className="hourly__temperature">{temperature ? temperature+'\u00B0' : '-'}</span>
+                {time}
+                <span className="hourly__temperature">{temperature+'\u00B0'}</span>
             </div>
         </div>
     )

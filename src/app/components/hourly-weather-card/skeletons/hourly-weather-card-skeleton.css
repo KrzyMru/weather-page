@@ -1,0 +1,9 @@
+.skeleton__hourly {
+    width: 338px;
+    height: 64px;
+    border-radius: 16px;
+
+    border: solid 1px var(--neutral-600);
+    background-color: var(--neutral-800);
+    animation: loading 1.5s ease-in-out infinite;
+}

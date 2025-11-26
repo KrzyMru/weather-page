@@ -45,11 +45,3 @@ export const Snowy: Story = {
     minTemperature: -7,
   },
 };
-
-export const MissingData: Story = {};
-
-export const Loading: Story = {
-  args: {
-    loading: true,
-  },
-};
