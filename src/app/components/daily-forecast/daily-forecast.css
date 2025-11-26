@@ -1,0 +1,19 @@
+.forecast__daily {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    color: var(--neutral-0);
+    font-family: var(--font-dm-sans);
+    font-size: var(--text-2lg);
+    font-weight: 600;
+}
+
+.daily__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    gap: 12px;
+} 
