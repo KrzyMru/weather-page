@@ -7,6 +7,10 @@ import DailyWeatherCardSkeleton from "../daily-weather-card/skeletons/daily-weat
 const DailyForecast = (props: DailyForecastProps) => {
     const { forecastData, loading } = { ...props }
 
+    const formatter = new Intl.DateTimeFormat("en-US", {
+        weekday: 'short'
+    });
+
     return (
         <div className="forecast__daily">
             Daily forecast
@@ -18,7 +22,7 @@ const DailyForecast = (props: DailyForecastProps) => {
                     forecastData.map(day =>
                         <li key={day.time}>
                             <DailyWeatherCard 
-                                day={new Date(day.time).toLocaleDateString('en-US',{ weekday: 'short' })}
+                                day={formatter.format(new Date(day.time))}
                                 maxTemperature={day.temperature_2m_max}
                                 minTemperature={day.temperature_2m_min}
                                 imageAlt={weatherCodeMap[day.weather_code].alt}
