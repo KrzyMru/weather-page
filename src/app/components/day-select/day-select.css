@@ -1,0 +1,73 @@
+.select__day {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+    min-width: 180px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    background-color: var(--neutral-600);
+    color: var(--neutral-0);
+    font-family: var(--font-dm-sans);
+    font-size: var(--text-md);
+    font-weight: 400;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+.select__day--loading {
+    animation: loading 1.5s ease-in-out infinite;
+    &:hover {
+        cursor: default;
+    }
+}
+
+.day__options {
+    margin-top: 8px;
+    min-width: 180px;
+    padding: 6px;
+    border-radius: 12px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    border: 1px solid var(--neutral-600);
+    background-color: var(--neutral-800);
+    color: var(--neutral-0);
+    font-family: var(--font-dm-sans);
+    font-size: var(--text-md);
+    font-weight: 400;
+}
+
+.day__option {
+    padding: 8px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--neutral-600);
+    }
+}
+.day__option--selected {
+    background-color: var(--neutral-600);
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--neutral-600);
+    }
+}
+
+.day__checkmark {
+    height: 13px;
+    width: 13px;
+}
