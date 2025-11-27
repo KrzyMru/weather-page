@@ -25,7 +25,7 @@ const DaySelect = (props: DaySelectProps) => {
                     <ListboxOption 
                         key={day} 
                         value={day} 
-                        className={`day__option ${value === day ? 'day__option--selected' : ''}`}
+                        className="day__option"
                     >
                         {formatter.format(new Date(day))}
                         {value === day && <img src={IconCheckmark} className="day__checkmark"/>}
