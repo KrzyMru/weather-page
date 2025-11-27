@@ -13,7 +13,7 @@ const HourlyWeatherCard = (props: HourlyWeatherCardProps) => {
             />
             <div className="hourly__data">
                 {time}
-                <span className="hourly__temperature">{temperature+'\u00B0'}</span>
+                <span className="hourly__temperature">{temperature.toFixed(0)+'\u00B0'}</span>
             </div>
         </div>
     )
