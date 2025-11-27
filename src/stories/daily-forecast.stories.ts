@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import DailyForecast from '../app/components/daily-forecast/daily-forecast';
 
 const meta = {
-  title: 'Components/DailyForecast',
+  title: 'Composite Components/DailyForecast',
   component: DailyForecast,
   tags: ['autodocs'],
 } satisfies Meta<typeof DailyForecast>;

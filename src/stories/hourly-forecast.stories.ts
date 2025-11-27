@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import HourlyForecast from '../app/components/hourly-forecast/hourly-forecast';
 
 const meta = {
-  title: 'Components/HourlyForecast',
+  title: 'Composite Components/HourlyForecast',
   component: HourlyForecast,
   tags: ['autodocs'],
 } satisfies Meta<typeof HourlyForecast>;
