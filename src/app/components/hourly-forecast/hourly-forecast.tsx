@@ -4,6 +4,7 @@ import HourlyWeatherCard from "../hourly-weather-card/hourly-weather-card";
 import HourlyWeatherCardSkeleton from "../hourly-weather-card/skeletons/hourly-weather-card-skeleton";
 import type { HourlyForecastProps } from "./types";
 import { useState } from "react";
+import DaySelect from "../day-select/day-select";
 
 const HourlyForecast = (props: HourlyForecastProps) => {
     const { forecastData, loading } = { ...props }
@@ -18,7 +19,11 @@ const HourlyForecast = (props: HourlyForecastProps) => {
         <div className="forecast__hourly">
             <div className="hourly__header">
                 Hourly forecast
-                <select />
+                <DaySelect 
+                    value={selectedDay}
+                    onChange={(newValue) => setSelectedDay(newValue)}
+                    days={[...new Set(forecastData.map(hour => hour.time.slice(0, 10)))]}
+                />
             </div>
             <ul className="hourly__list">
                 {
