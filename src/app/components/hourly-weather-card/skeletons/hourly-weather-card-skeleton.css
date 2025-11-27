@@ -4,6 +4,6 @@
     border-radius: 16px;
 
     border: solid 1px var(--neutral-600);
-    background-color: var(--neutral-800);
+    background-color: var(--neutral-700);
     animation: loading 1.5s ease-in-out infinite;
 }
