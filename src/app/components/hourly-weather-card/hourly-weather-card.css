@@ -1,6 +1,6 @@
 .card__hourly {
     min-width: 340px;
-    border-radius: 16px;
+    border-radius: 8px;
     padding: 12px 18px 12px 12px;
     box-sizing: border-box;
 
@@ -8,7 +8,7 @@
     gap: 8px;
 
     border: solid 1px var(--neutral-600);
-    background-color: var(--neutral-800);
+    background-color: var(--neutral-700);
     color: var(--neutral-0);
     font-family: var(--font-dm-sans);
     font-size: var(--text-lg);
