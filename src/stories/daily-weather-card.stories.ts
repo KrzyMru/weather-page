@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import DailyWeatherCard from '../app/components/daily-weather-card/daily-weather-card';
-import IconSunny from "../app/assets/icon-sunny.webp";
-import IconRain from "../app/assets/icon-rain.webp";
-import IconSnow from "../app/assets/icon-snow.webp";
+import IconSunny from "../app/assets/icons/weather/icon-sunny.webp";
+import IconRain from "../app/assets/icons/weather/icon-rain.webp";
+import IconSnow from "../app/assets/icons/weather/icon-snow.webp";
 
 const meta = {
   title: 'Components/DailyWeatherCard',

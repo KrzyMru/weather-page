@@ -1,11 +1,11 @@
-import IconDrizzle from "../assets/icon-drizzle.webp";
-import IconFog from "../assets/icon-fog.webp";
-import IconOvercast from "../assets/icon-overcast.webp";
-import IconPartlyCloudy from "../assets/icon-partly-cloudy.webp";
-import IconRain from "../assets/icon-rain.webp";
-import IconSnow from "../assets/icon-snow.webp";
-import IconStorm from "../assets/icon-storm.webp";
-import IconSunny from "../assets/icon-sunny.webp";
+import IconDrizzle from "../assets/icons/weather/icon-drizzle.webp";
+import IconFog from "../assets/icons/weather/icon-fog.webp";
+import IconOvercast from "../assets/icons/weather/icon-overcast.webp";
+import IconPartlyCloudy from "../assets/icons/weather/icon-partly-cloudy.webp";
+import IconRain from "../assets/icons/weather/icon-rain.webp";
+import IconSnow from "../assets/icons/weather/icon-snow.webp";
+import IconStorm from "../assets/icons/weather/icon-storm.webp";
+import IconSunny from "../assets/icons/weather/icon-sunny.webp";
 import type { WeatherIcon } from "./types";
 
 export const weatherCodeMap: Record<number, WeatherIcon> = {
