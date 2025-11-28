@@ -1,6 +1,6 @@
 interface CurrentWeatherProps {
     place: string,
-    date: string,
+    date: Date,
     imageSrc: string,
     imageAlt: string,
     temperature: number,

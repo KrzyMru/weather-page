@@ -2,7 +2,12 @@ import "./hourly-weather-card.css";
 import type { HourlyWeatherCardProps } from "./types";
 
 const HourlyWeatherCard = (props: HourlyWeatherCardProps) => {
-    const { imageSrc, imageAlt, time, temperature } = { ...props }
+    const { imageSrc, imageAlt, date, temperature } = { ...props }
+
+    const formatter = new Intl.DateTimeFormat("en-US", {
+        hour: "numeric",
+        hour12: true,
+    });
 
     return (
         <div className="card__hourly">
@@ -12,7 +17,7 @@ const HourlyWeatherCard = (props: HourlyWeatherCardProps) => {
                 className="hourly__icon"
             />
             <div className="hourly__data">
-                {time}
+                {formatter.format(date)}
                 <span className="hourly__temperature">{temperature.toFixed(0)+'\u00B0'}</span>
             </div>
         </div>

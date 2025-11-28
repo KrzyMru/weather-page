@@ -20,7 +20,7 @@ export const Sunny: Story = {
   args: {
     imageSrc: IconSunny,
     imageAlt: 'Sunny',
-    time: '9 AM',
+    date: new Date(),
     temperature: 16,
   },
 };
@@ -29,7 +29,7 @@ export const Rainy: Story = {
   args: {
     imageSrc: IconRain,
     imageAlt: 'Rain',
-    time: '2 PM',
+    date: new Date(Date.now() + 5 * 60 * 60 * 1000),
     temperature: 11,
   },
 };
@@ -38,7 +38,7 @@ export const Snowy: Story = {
   args: {
     imageSrc: IconSnow,
     imageAlt: 'Snow',
-    time: '8 PM',
+    date: new Date(Date.now() + 9 * 60 * 60 * 1000),
     temperature: -5,
   },
 };

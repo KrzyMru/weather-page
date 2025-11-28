@@ -1,7 +1,7 @@
 interface HourlyWeatherCardProps {
     imageSrc: string,
     imageAlt: string,
-    time: string,
+    date: Date,
     temperature: number,
 }
 

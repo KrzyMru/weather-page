@@ -80,13 +80,6 @@ const App = () => {
     fetchHourlyForecastData();
   }, []);
 
-  const currentDateFormatter = new Intl.DateTimeFormat("en-US", {
-    weekday: 'long',
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-  });
-
   const now = Date.now();
 
   const upcomingHours = useMemo(() => {
@@ -108,7 +101,7 @@ const App = () => {
             :
             <CurrentWeather 
               place={place}
-              date={currentDateFormatter.format(new Date(currentForecastData.time))}
+              date={new Date(currentForecastData.time)}
               imageSrc={weatherCodeMap[currentForecastData.weather_code].src}
               imageAlt={weatherCodeMap[currentForecastData.weather_code].alt}
               temperature={currentForecastData.temperature_2m}

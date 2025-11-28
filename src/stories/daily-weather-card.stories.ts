@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Sunny: Story = {
   args: {
-    day: 'Mon',
+    date: new Date(),
     imageSrc: IconSunny,
     imageAlt: 'Sunny',
     maxTemperature: 24,
@@ -28,7 +28,7 @@ export const Sunny: Story = {
 
 export const Rainy: Story = {
   args: {
-    day: 'Tue',
+    date: new Date(Date.now() + 24 * 60 * 60 * 1000),
     imageSrc: IconRain,
     imageAlt: 'Rain',
     maxTemperature: 13,
@@ -38,7 +38,7 @@ export const Rainy: Story = {
 
 export const Snowy: Story = {
   args: {
-    day: 'Fri',
+    date: new Date(Date.now() + 48 * 60 * 60 * 1000),
     imageSrc: IconSnow,
     imageAlt: 'Snow',
     maxTemperature: 3,

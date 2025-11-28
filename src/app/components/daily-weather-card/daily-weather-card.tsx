@@ -2,11 +2,15 @@ import "./daily-weather-card.css";
 import type { DailyWeatherCardProps } from "./types";
 
 const DailyWeatherCard = (props: DailyWeatherCardProps) => {
-    const { day, imageSrc, imageAlt, maxTemperature, minTemperature } = { ...props }
+    const { date, imageSrc, imageAlt, maxTemperature, minTemperature } = { ...props }
+
+    const formatter = new Intl.DateTimeFormat("en-US", {
+        weekday: 'short'
+    });
 
     return (
         <div className="card__daily">
-            <span>{day}</span>
+            <span>{formatter.format(date)}</span>
             <img
                 src={imageSrc} 
                 alt={imageAlt} 

@@ -15,7 +15,7 @@ type Story = StoryObj<typeof meta>;
 export const Sunny: Story = {
   args: {
     place: 'Berlin, Germany',
-    date: 'Tuesday, Aug 5, 2025',
+    date: new Date(),
     imageSrc: IconSunny,
     imageAlt: 'Sunny',
     temperature: 20,
@@ -25,7 +25,7 @@ export const Sunny: Story = {
 export const Rainy: Story = {
   args: {
     place: 'Paris, France',
-    date: 'Tuesday, Aug 5, 2025',
+    date: new Date(),
     imageSrc: IconRain,
     imageAlt: 'Rain',
     temperature: 11,

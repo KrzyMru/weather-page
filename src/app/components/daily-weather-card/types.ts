@@ -1,5 +1,5 @@
 interface DailyWeatherCardProps {
-    day: string,
+    date: Date,
     imageSrc: string,
     imageAlt: string,
     minTemperature: number,
