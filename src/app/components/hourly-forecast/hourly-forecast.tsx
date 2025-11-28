@@ -3,17 +3,22 @@ import { weatherCodeMap } from "../../constants/weather-code-map";
 import HourlyWeatherCard from "../hourly-weather-card/hourly-weather-card";
 import HourlyWeatherCardSkeleton from "../hourly-weather-card/skeletons/hourly-weather-card-skeleton";
 import type { HourlyForecastProps } from "./types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DaySelect from "../day-select/day-select";
 
 const HourlyForecast = (props: HourlyForecastProps) => {
     const { forecastData, loading } = { ...props }
-    const [selectedDay, setSelectedDay] = useState<string|undefined>(forecastData.length > 0 ? forecastData[0].time.slice(0, 10) : undefined);
+    const [selectedDay, setSelectedDay] = useState<string|undefined>(forecastData.length > 0 ? forecastData[0].time.slice(0, 10) : new Date().toString());
 
     const formatter = new Intl.DateTimeFormat("en-US", {
         hour: "numeric",
         hour12: true,
     });
+
+    useEffect(() => {
+        if(forecastData.length > 0)
+            setSelectedDay(forecastData[0].time.slice(0, 10));
+    }, [forecastData]);
 
     return (
         <div className="forecast__hourly">
