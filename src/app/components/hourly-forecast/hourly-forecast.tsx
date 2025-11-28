@@ -23,6 +23,7 @@ const HourlyForecast = (props: HourlyForecastProps) => {
                     value={selectedDay}
                     onChange={(newValue) => setSelectedDay(newValue)}
                     days={[...new Set(forecastData.map(hour => hour.time.slice(0, 10)))]}
+                    loading={loading}
                 />
             </div>
             <ul className="hourly__list">
