@@ -1,7 +1,7 @@
 .current__container {
-    min-width: 700px;
+    min-width: 180px;
     padding: 80px 20px;
-    border-radius: 20px;
+    border-radius: 32px;
 
     display: flex;
     justify-content: space-between;
@@ -16,6 +16,15 @@
     background-image: url('../../assets/images/bg-today-large.svg');
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media screen and (max-width: 600px) {
+        padding: 35px 20px;
+
+        flex-direction: column;
+        gap: 20px;
+
+        background-image: url('../../assets/images/bg-today-small.svg');
+    }
 }
 
 .current__location {
@@ -38,6 +47,10 @@
     gap: 20px;
 
     font-size: var(--text-2xl);
+
+    @media screen and (max-width: 600px) {
+        gap: 40px;
+    }
 }
 
 .current__icon {

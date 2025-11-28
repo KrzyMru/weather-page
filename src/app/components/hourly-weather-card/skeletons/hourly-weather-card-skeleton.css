@@ -1,7 +1,8 @@
 .skeleton__hourly {
-    min-width: 338px;
+    min-width: 220px;
     height: 64px;
-    border-radius: 16px;
+    border-radius: 8px;
+    box-sizing: border-box;
 
     border: solid 1px var(--neutral-600);
     background-color: var(--neutral-700);
