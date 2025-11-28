@@ -1,0 +1,46 @@
+.current__container {
+    min-width: 700px;
+    padding: 80px 20px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: solid 1px var(--neutral-600);
+    background-color: var(--neutral-800);
+    color: var(--neutral-0);
+    font-family: var(--font-dm-sans);
+    font-weight: 600;
+
+    background-image: url('../../assets/images/bg-today-large.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.current__location {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: var(--text-2lg);
+}
+
+.current__date {
+    color: var(--neutral-200);
+    font-size: var(--text-md);
+    font-weight: 400;
+}
+
+.current__data {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-size: var(--text-2xl);
+}
+
+.current__icon {
+    width: 112px;
+    height: 112px;
+}
