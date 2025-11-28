@@ -18,7 +18,7 @@
     background-size: cover;
 
     @media screen and (max-width: 600px) {
-        padding: 35px 20px;
+        padding: 28px 20px;
 
         flex-direction: column;
         gap: 20px;
@@ -32,12 +32,12 @@
     flex-direction: column;
     gap: 8px;
 
-    font-size: var(--text-2lg);
+    font-size: var(--text-xl);
 }
 
 .current__date {
     color: var(--neutral-200);
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
     font-weight: 400;
 }
 
