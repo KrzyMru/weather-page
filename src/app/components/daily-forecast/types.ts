@@ -10,4 +10,4 @@ interface DailyForecastData {
     temperature_2m_min: number,
 }
 
-export type { DailyForecastProps }
+export type { DailyForecastProps, DailyForecastData }

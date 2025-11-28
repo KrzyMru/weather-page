@@ -9,4 +9,4 @@ interface HourlyForecastData {
     temperature_2m: number,
 }
 
-export type { HourlyForecastProps }
+export type { HourlyForecastProps, HourlyForecastData }
