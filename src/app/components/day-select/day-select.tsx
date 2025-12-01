@@ -20,7 +20,7 @@ const DaySelect = (props: DaySelectProps) => {
                 {value && !loading ? formatter.format(new Date(value)) : '---'}
                 <img src={IconDropdown} />
             </ListboxButton>
-            <ListboxOptions anchor="bottom" className="day__options">
+            <ListboxOptions anchor="bottom end" className="day__options">
                 {days.map(day => (
                     <ListboxOption 
                         key={day} 
