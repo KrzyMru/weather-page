@@ -1,6 +1,6 @@
 .current__container {
     min-width: 180px;
-    padding: 80px 20px;
+    padding: 144px 20px;
     border-radius: 32px;
 
     display: flex;
@@ -18,7 +18,7 @@
     background-size: cover;
 
     @media screen and (max-width: 600px) {
-        padding: 28px 20px;
+        padding: 92px 20px;
 
         flex-direction: column;
         gap: 20px;

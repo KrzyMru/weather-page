@@ -134,10 +134,12 @@ const App = () => {
             loading={loadingDailyForecast}
           />
         </div>
+        <div className='page__hourly'>
         <HourlyForecast 
           forecastData={upcomingHours}
           loading={loadingHourlyForecast}
         />
+        </div>
       </div>
     </main>
   )
