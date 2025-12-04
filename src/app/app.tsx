@@ -12,6 +12,9 @@ import type { CurrentForecastResponse } from './api/get-current-forecast/types';
 import getCurrentForecast from './api/get-current-forecast/get-current-forecast';
 import CurrentWeatherSkeleton from './components/current-weather/skeletons/current-weather-skeleton';
 import { weatherCodeMap } from './constants/weather-code-map';
+import CitySearch from './components/city-search/city-search';
+import UnitSelect from './components/unit-select/unit-select';
+import IconLogo from "./assets/icons/utility/logo.svg";
 
 const App = () => {
   const latitude = 52;
@@ -89,9 +92,14 @@ const App = () => {
   return (
     <main className='page'>
       <div className='page__top'>
-        <div></div>
+        <div className='page__banner'>
+          <img src={IconLogo} alt='logo' className='page__logo' />
+          <UnitSelect />
+        </div>
         <header className='page__header'>How's the sky looking today?</header>
-        <div></div>
+        <div className='page__search'>
+          <CitySearch />
+        </div>
       </div>
       <div className='page__content'>
         <div className='content__main'>
@@ -135,10 +143,10 @@ const App = () => {
           />
         </div>
         <div className='page__hourly'>
-        <HourlyForecast 
-          forecastData={upcomingHours}
-          loading={loadingHourlyForecast}
-        />
+          <HourlyForecast 
+            forecastData={upcomingHours}
+            loading={loadingHourlyForecast}
+          />
         </div>
       </div>
     </main>
