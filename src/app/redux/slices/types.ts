@@ -4,4 +4,10 @@ interface Settings {
     precipitation: 'millimeters' | 'inches',
 }
 
-export type { Settings }
+interface GeolocationSliceProps {
+    name: string,
+    latitude: number,
+    longitude: number,
+}
+
+export type { Settings, GeolocationSliceProps }

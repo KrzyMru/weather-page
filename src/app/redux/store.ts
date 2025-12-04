@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import settingsReducer from "./slices/settingsSlice";
+import geolocationReducer from "./slices/geolocationSlice";
 
 const store = configureStore({
     reducer: {
         settings: settingsReducer,
+        geolocation: geolocationReducer,
     },
 });
 
