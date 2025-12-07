@@ -15,23 +15,29 @@ import { weatherCodeMap } from './constants/weather-code-map';
 import CitySearch from './components/city-search/city-search';
 import UnitSelect from './components/unit-select/unit-select';
 import IconLogo from "./assets/icons/utility/logo.svg";
+import { useSelector } from 'react-redux';
+import { latitudeGeolocationSelector, longitudeGeolocationSelector, NameGeolocationSelector } from './redux/slices/geolocationSlice';
+import { precipitationUnitSelector, temperatureUnitSelector, windSpeedUnitSelector } from './redux/slices/settingsSlice';
 
 const App = () => {
-  const latitude = 52;
-  const longitude = 21;
-  const place = "Warsaw, Poland";
   const [currentForecastData, setCurrentForecastData] = useState<CurrentForecastResponse['current']>();
   const [dailyForecastData, setDailyForecastData] = useState<DailyForecastData[]>([]);
   const [hourlyForecastData, setHourlyForecastData] = useState<HourlyForecastData[]>([]);
   const [loadingCurrentForecast, setLoadingCurrentForecast] = useState<boolean>(false);
   const [loadingDailyForecast, setLoadingDailyForecast] = useState<boolean>(false);
   const [loadingHourlyForecast, setLoadingHourlyForecast] = useState<boolean>(false);
+  const place = useSelector(NameGeolocationSelector);
+  const latitude = useSelector(latitudeGeolocationSelector);
+  const longitude = useSelector(longitudeGeolocationSelector);
+  const temperatureUnit = useSelector(temperatureUnitSelector);
+  const windSpeedUnit = useSelector(windSpeedUnitSelector);
+  const precipitationUnit = useSelector(precipitationUnitSelector);
 
   useEffect(() => {
     const fetchCurrentForecastData = async () => {
       try {
         setLoadingCurrentForecast(true);
-        const response = await getCurrentForecast({ latitude, longitude });
+        const response = await getCurrentForecast({ latitude, longitude, temperatureUnit, precipitationUnit, windSpeedUnit });
         const data = response.current;
         await new Promise((resolve) => setTimeout(resolve, 2000));
         setCurrentForecastData(data);
@@ -43,7 +49,7 @@ const App = () => {
     const fetchDailyForecastData = async () => {
       try {
         setLoadingDailyForecast(true);
-        const response = await getDailyForecast({ latitude, longitude });
+        const response = await getDailyForecast({ latitude, longitude, temperatureUnit });
         const data = response.daily.time.map((day, index) => {
           return { 
             time: day, 
@@ -62,7 +68,7 @@ const App = () => {
     const fetchHourlyForecastData = async () => {
       try {
         setLoadingHourlyForecast(true);
-        const response = await getHourlyForecast({ latitude, longitude });
+        const response = await getHourlyForecast({ latitude, longitude, temperatureUnit });
         const data = response.hourly.time.map((day, index) => {
           return { 
             time: day, 
@@ -81,7 +87,7 @@ const App = () => {
     fetchCurrentForecastData();
     fetchDailyForecastData();
     fetchHourlyForecastData();
-  }, []);
+  }, [place, latitude, longitude, temperatureUnit, windSpeedUnit, precipitationUnit]);
 
   const now = Date.now();
 
@@ -118,22 +124,22 @@ const App = () => {
           <div className='content__info'>
             <InfoWeatherCard 
               title='Feels like'
-              data={currentForecastData?.apparent_temperature.toFixed(0).toString()+'\u00B0'}
+              data={currentForecastData ? currentForecastData.apparent_temperature.toFixed(0).toString()+'\u00B0' : undefined}
               loading={loadingCurrentForecast}
             />
             <InfoWeatherCard 
               title='Humidity'
-              data={currentForecastData?.relative_humidity_2m.toString()+'%'}
+              data={currentForecastData ? currentForecastData.relative_humidity_2m.toString()+'%' : undefined}
               loading={loadingCurrentForecast}
             />
             <InfoWeatherCard 
               title='Wind'
-              data={currentForecastData?.wind_speed_10m.toFixed(0).toString()+' km/h'}
+              data={currentForecastData ? currentForecastData.wind_speed_10m.toFixed(0).toString()+' '+(windSpeedUnit === 'kmh' ? 'km/h' : windSpeedUnit) : undefined}
               loading={loadingCurrentForecast}
             />
             <InfoWeatherCard 
               title='Precipitation'
-              data={currentForecastData?.precipitation.toString()+' mm'}
+              data={currentForecastData ? currentForecastData.precipitation.toString()+' '+(precipitationUnit === 'inch' ? 'in' : precipitationUnit) : undefined}
               loading={loadingCurrentForecast}
             />
           </div>
