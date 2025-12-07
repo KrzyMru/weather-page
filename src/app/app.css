@@ -91,3 +91,6 @@
 
     display: flex;
 }
+.page__hourly > .forecast__hourly {
+    flex-grow: 1;
+}
