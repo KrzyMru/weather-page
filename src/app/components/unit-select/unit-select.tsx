@@ -19,9 +19,9 @@ const UnitSelect = () => {
 
         if(changedValue === 'celsius' || changedValue === 'fahrenheit')
             dispatch(changeUnitTemperature(changedValue));
-        else if(changedValue === 'km/h' || changedValue === 'mph')
+        else if(changedValue === 'kmh' || changedValue === 'mph')
             dispatch(changeUnitWindSpeed(changedValue));
-        else if(changedValue === 'millimeters' || changedValue === 'inches')
+        else if(changedValue === 'mm' || changedValue === 'inch')
             dispatch(changeUnitPrecipitation(changedValue));
     }
 
@@ -39,12 +39,12 @@ const UnitSelect = () => {
                         if(temperatureUnit === 'celsius') {
                             dispatch(changeUnitTemperature('fahrenheit'));
                             dispatch(changeUnitWindSpeed('mph'));
-                            dispatch(changeUnitPrecipitation('inches'));
+                            dispatch(changeUnitPrecipitation('inch'));
                         }
                         else {
                             dispatch(changeUnitTemperature('celsius'));
-                            dispatch(changeUnitWindSpeed('km/h'));
-                            dispatch(changeUnitPrecipitation('millimeters'));
+                            dispatch(changeUnitWindSpeed('kmh'));
+                            dispatch(changeUnitPrecipitation('mm'));
                         }
                     }}
                     className="unit__option"
@@ -74,11 +74,11 @@ const UnitSelect = () => {
 
                 <span className="unit__category">Wind Speed</span>
                 <ListboxOption 
-                    value="km/h"
+                    value="kmh"
                     className="unit__option"
                 >
                     km/h
-                    {windSpeedUnit === 'km/h' && <img src={IconCheckmark} className="unit__checkmark"/>}
+                    {windSpeedUnit === 'kmh' && <img src={IconCheckmark} className="unit__checkmark"/>}
                 </ListboxOption>
                 <ListboxOption 
                     value="mph"
@@ -91,18 +91,18 @@ const UnitSelect = () => {
 
                 <span className="unit__category">Precipitation</span>
                 <ListboxOption 
-                    value="millimeters"
+                    value="mm"
                     className="unit__option"
                 >
                     Millimeters (mm)
-                    {precipitationUnit === 'millimeters' && <img src={IconCheckmark} className="unit__checkmark"/>}
+                    {precipitationUnit === 'mm' && <img src={IconCheckmark} className="unit__checkmark"/>}
                 </ListboxOption>
                 <ListboxOption 
-                    value="inches"
+                    value="inch"
                     className="unit__option"
                 >
                     Inches (in)
-                    {precipitationUnit === 'inches' && <img src={IconCheckmark} className="unit__checkmark"/>}
+                    {precipitationUnit === 'inch' && <img src={IconCheckmark} className="unit__checkmark"/>}
                 </ListboxOption>
             </ListboxOptions>
         </Listbox>

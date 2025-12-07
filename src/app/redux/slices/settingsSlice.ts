@@ -4,8 +4,8 @@ import type { RootState } from '../store';
 
 const initialState: Settings = {
     temperature: 'celsius',
-    windSpeed: 'km/h',
-    precipitation: 'millimeters',
+    windSpeed: 'kmh',
+    precipitation: 'mm',
 }
 
 export const settingsSlice = createSlice({

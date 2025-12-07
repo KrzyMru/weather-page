@@ -1,7 +1,7 @@
 interface Settings {
     temperature: 'celsius' | 'fahrenheit',
-    windSpeed: 'km/h' | 'mph',
-    precipitation: 'millimeters' | 'inches',
+    windSpeed: 'kmh' | 'mph',
+    precipitation: 'mm' | 'inch',
 }
 
 interface GeolocationSliceProps {
