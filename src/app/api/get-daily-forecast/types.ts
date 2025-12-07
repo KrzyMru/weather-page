@@ -1,3 +1,5 @@
+import type { Settings } from "../../redux/slices/types"
+
 interface DailyForecastResponse {
     latitude: number,
     longitude: number, 
@@ -20,6 +22,7 @@ interface DailyForecastResponse {
 interface GetDailyForecastProps {
     latitude: number, 
     longitude: number,
+    temperatureUnit: Settings['temperature'],
 }
 
 export type { DailyForecastResponse, GetDailyForecastProps }

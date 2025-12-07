@@ -1,3 +1,5 @@
+import type { Settings } from "../../redux/slices/types"
+
 interface CurrentForecastResponse {
     latitude: number,
     longitude: number, 
@@ -26,6 +28,9 @@ interface CurrentForecastResponse {
 interface GetCurrentForecastProps {
     latitude: number, 
     longitude: number,
+    temperatureUnit: Settings['temperature'],
+    windSpeedUnit: Settings['windSpeed'],
+    precipitationUnit: Settings['precipitation'],
 }
 
 export type { CurrentForecastResponse, GetCurrentForecastProps }

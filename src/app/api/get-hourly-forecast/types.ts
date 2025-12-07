@@ -1,3 +1,5 @@
+import type { Settings } from "../../redux/slices/types"
+
 interface HourlyForecastResponse {
     latitude: number,
     longitude: number, 
@@ -18,6 +20,7 @@ interface HourlyForecastResponse {
 interface GetHourlyForecastProps {
     latitude: number, 
     longitude: number,
+    temperatureUnit: Settings['temperature'],
 }
 
 export type { HourlyForecastResponse, GetHourlyForecastProps }
